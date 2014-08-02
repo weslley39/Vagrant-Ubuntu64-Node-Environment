@@ -44,8 +44,3 @@ package { 'supervisor':
   provider => npm,
   ensure => present
 }
-
-package { 'serve':
-  provider => npm,
-  ensure => present
-}
