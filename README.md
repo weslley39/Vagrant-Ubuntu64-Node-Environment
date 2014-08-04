@@ -83,5 +83,3 @@ As seguintes portas estão abertas acessando localhost:PORTA
 
 
 That's All Folks
-
-
