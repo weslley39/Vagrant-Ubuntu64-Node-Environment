@@ -27,6 +27,7 @@ $ vagrant up --provision
 
 ##Como vou domar esse bicho ?
 Calma padawan vamos aos comandos básicos:
+
 ALERT: Sempre execute os seguintes comando dentro da pasta Weslley-Vagrant-Puppe.
 
 1. Para acessar a maquina depois de iniciada:
