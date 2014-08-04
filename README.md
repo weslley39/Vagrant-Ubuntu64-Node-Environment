@@ -13,17 +13,17 @@ Desenvolvedores usam ambientes virtuais todo dia com suas aplicações web. Desd
 ##Como configuro esse negócio?
 1. Instale o VirtualBox para seu sistema operacional - https://www.virtualbox.org/wiki/Downloads.
 2. Instale o Vagrant para seu sistema operacional - http://www.vagrantup.com/downloads.html.
-3. Instale o Git, caso ainda não tenha - http://www.git-scm.com/downloads.
-4.Clone este repositório.
+3. Instale o Git, caso ainda não tenha - http://www.git-scm.com/downloads
+4. Clone este repositório.
 ```bash
 $ git clone https://github.com/weslley39/Weslley-Vagrant-Puppet.git
 ```
-5.Com o Terminal, Iterm, PowerShell ou Cmd, execute o seguinte comando dentro da pasta Weslley-Vagrant-Puppet:
+5. Com o Terminal, Iterm, PowerShell ou Cmd, execute o seguinte comando dentro da pasta Weslley-Vagrant-Puppet:
 ```bash
 $ vagrant up --provision
 ```
-6.Espere ele baixar a máquina virtual e todos os componentes
-7.A VM já estará ligada pronta para uso
+6. Espere ele baixar a máquina virtual e todos os componentes
+7. A VM já estará ligada pronta para uso
 
 ##Como vou domar esse bicho ?
 Calma padawan vamos aos comandos básicos:
