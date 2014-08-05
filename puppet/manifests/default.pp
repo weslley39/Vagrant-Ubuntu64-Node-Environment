@@ -19,28 +19,23 @@ package { 'mocha':
   provider => npm,
   ensure => present
 }
-
-package { 'serve':
-  provider => npm,
-  ensure => present
-}
-
 package { 'gulp':
   provider => npm,
   ensure => present
 }
-
 package { 'forever':
   provider => npm,
   ensure => present
 }
-
 package { 'bower':
   provider => npm,
   ensure => present
 }
-
 package { 'supervisor':
+  provider => npm,
+  ensure => present
+}
+package { 'serve':
   provider => npm,
   ensure => present
 }
