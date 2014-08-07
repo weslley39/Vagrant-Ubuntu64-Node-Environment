@@ -39,11 +39,15 @@ ou do seu SSH preferido, como [Putty](http://www.putty.org/)
 $ ssh vagrant@localhost -p 2222
 ```
 Dica - caso necessite de password, é vagrant
+
+
 2. Para desligar a máquina
 ```bash
 $ vagrant halt
 ```
 Dica: Execute este comando fora da conexão SSH, dentro da pasta.
+
+
 3.  Para Suspender a máquina
 ```bash
 $ vagrant suspend
