@@ -62,10 +62,14 @@ $ vagrant up
 ```
 
 ##Mas o que vem nessa VM ?
+
+###SO
+1. Ubuntu Trusty 64
+
 ###Serviços
 1. NodeJs
 2. MongoDB
-3. Redis
+3. Python
 4. Ruby
 
 ###Pacotes
@@ -75,6 +79,9 @@ $ vagrant up
 4. Forever
 5. Bower
 6. Supervisor
+7. Node-Inspector
+8. Grunt-Cli
+9. Yo
 
 
 ##Como acessos meus arquivos na minha máquina real ?
