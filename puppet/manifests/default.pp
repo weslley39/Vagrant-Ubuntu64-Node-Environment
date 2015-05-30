@@ -32,45 +32,55 @@ class othertools {
     }
 }
 
+class nodepackages {
+    exec { "gulp":
+      command => "sudo npm install -g gulp",
+      path => ["/bin", "/usr/bin"]
+    }
+    exec { "forever":
+      command => "sudo npm install -g forever",
+      path => ["/bin", "/usr/bin"]
+    }
+    exec { "bower":
+      command => "sudo npm install -g bower",
+      path => ["/bin", "/usr/bin"]
+    }
+    exec { "supervisor":
+      command => "sudo npm install -g supervisor",
+      path => ["/bin", "/usr/bin"]
+    }
+    exec { "node-inspector":
+      command => "sudo npm install -g node-inspector",
+      path => ["/bin", "/usr/bin"]
+    }
+    exec { "grunt-cli":
+      command => "sudo npm install -g grunt-cli",
+      path => ["/bin", "/usr/bin"]
+    }
+    exec { "yo":
+      command => "sudo npm install -g yo",
+      path => ["/bin", "/usr/bin"]
+    }
+}
 
+class nodejs {
+  exec { "git_clone_n":
+    command => "git clone https://github.com/visionmedia/n.git /home/vagrant/n",
+    path => ["/bin", "/usr/bin"],
+    require => [Exec["aptGetUpdate"], Package["git"], Package["curl"], Package["g++"]]
+  }
 
-class nodejsconfigs {
-  class { '::nodejs':
-    manage_package_repo       => false,
-    nodejs_dev_package_ensure => 'present',
-    npm_package_ensure        => 'present',
+  exec { "install_n":
+    command => "make install",
+    path => ["/bin", "/usr/bin"],
+    cwd => "/home/vagrant/n",
+    require => Exec["git_clone_n"]
   }
-  package { "mocha":
-    provider => "npm",
-    ensure => "present",
-  }
-  package { "gulp":
-    provider => "npm",
-    ensure => "present",
-  }
-  package { "forever":
-    provider => "npm",
-    ensure => "present",
-  }
-  package { "bower":
-    provider => "npm",
-    ensure => "present",
-  }
-  package { "supervisor":
-    provider => "npm",
-    ensure => "present",
-  }
-  package { "node-inspector":
-    provider => "npm",
-    ensure => "present",
-  }
-  package { "grunt-cli":
-    provider => "npm",
-    ensure => "present",
-  }
-  package { "yo":
-    provider => "npm",
-    ensure => "present",
+
+  exec { "install_node":
+    command => "n stable",
+    path => ["/bin", "/usr/bin", "/usr/local/bin"],  
+    require => [Exec["git_clone_n"], Exec["install_n"]]
   }
 }
 
@@ -89,5 +99,6 @@ class mongodb {
 
 include apt_update
 include othertools
-include nodejsconfigs
+include nodejs
+include nodepackages
 include mongodb
