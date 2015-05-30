@@ -1,4 +1,3 @@
-MODULES[0]='puppetlabs-nodejs';
 MODULES[1]='puppetlabs-mongodb';
 MODULES[2]='puppetlabs-apt';
 MODULES[3]='puppetlabs-gcc';
