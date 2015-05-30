@@ -35,31 +35,38 @@ class othertools {
 class nodepackages {
     exec { "gulp":
       command => "sudo npm install -g gulp",
-      path => ["/bin", "/usr/bin"]
+      path => ["/bin", "/usr/bin"],
+      require => Exec["install_node"],
     }
     exec { "forever":
       command => "sudo npm install -g forever",
-      path => ["/bin", "/usr/bin"]
+      path => ["/bin", "/usr/bin"],
+      require => Exec["install_node"],
     }
     exec { "bower":
       command => "sudo npm install -g bower",
-      path => ["/bin", "/usr/bin"]
+      path => ["/bin", "/usr/bin"],
+      require => Exec["install_node"],
     }
     exec { "supervisor":
       command => "sudo npm install -g supervisor",
-      path => ["/bin", "/usr/bin"]
+      path => ["/bin", "/usr/bin"],
+      require => Exec["install_node"],
     }
     exec { "node-inspector":
       command => "sudo npm install -g node-inspector",
-      path => ["/bin", "/usr/bin"]
+      path => ["/bin", "/usr/bin"],
+      require => Exec["install_node"],
     }
     exec { "grunt-cli":
       command => "sudo npm install -g grunt-cli",
-      path => ["/bin", "/usr/bin"]
+      path => ["/bin", "/usr/bin"],
+      require => Exec["install_node"],
     }
     exec { "yo":
       command => "sudo npm install -g yo",
-      path => ["/bin", "/usr/bin"]
+      path => ["/bin", "/usr/bin"],
+      require => Exec["install_node"],
     }
 }
 
