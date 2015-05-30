@@ -1,4 +1,4 @@
-Weslley-Vagrant-Puppet
+Vagrant-Ubuntu64-Node-Environment
 ======================
 
 ####Essa é a configuração que fiz, que melhor atende o que necessito fazer referente a programação no [Vagrant](http://www.vagrantup.com/).
